@@ -4,7 +4,7 @@ Theme URI: https://github.com/dezinezync/elytra-blog
 Author: Nikhil Nigade (Dezine Zync)
 Author URI: https://twitter.com/dezinezync
 Description: Theme for Elytra's Blog.
-Version: 1.1.0
+Version: 1.1.1
 License: MIT
 Text Domain: elytra
 Tags: elytra
@@ -182,6 +182,8 @@ article {
     img {
         max-width: 100%;
         height: auto;
+        transform: translateX(-50%);
+        margin-left: 50%;
     }
 
     .post-thumbnail img {
@@ -229,6 +231,10 @@ article {
 footer {
     margin-top: 40px;
     border-top: 1px solid var(--color-border);
+    
+    &:not(.entry-footer) {
+        background-color: var(--color-base);
+    }
 
     font-size: 0.85rem;
     color: var(--color-subtext);
@@ -238,4 +244,16 @@ footer {
         text-align: center;
         list-style: none;
     }
+}
+
+.entry-footer {
+    padding-top: 12px;
+}
+
+@media only screen and (min-width: 880px) {
+
+    article img {
+        max-width: 150%;
+    }
+
 }
